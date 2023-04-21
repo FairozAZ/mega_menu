@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Mega Menu</title>
+</head>
+<body>
+  <div class="container">
+    <!-- only laptop and tab -->
+    <nav>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        
+        <div class="mega-menu">
+            <a href="#">services</a>
+            <div class="mega-menu-item">
+                <div class="image"><img src="laptop.jpg" alt="laptop"></div>
+                <div class="item">
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                </div>
+                <div class="item">
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                </div>
+                <div class="item">
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                    <a href="#">item</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#">project</a>
+        <a href="#">contact</a>
+    </nav>
+    <!-- only for mobile screen -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#" onclick="closeNav()">home</a>
+        <a href="#" onclick="closeNav()">about</a>
+        
+        <div class="mobile-mega-menu">
+            <a href="#">services</a>
+            <div class="mobile-mega-menu-item">
+                <div class="image"><img src="laptop.jpg" alt="laptop"></div>
+                <div class="item-container">
+                    <div class="item">
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                        <a href="#" onclick="closeNav()">item</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" onclick="closeNav()">project</a>
+        <a href="#" onclick="closeNav()">contact</a>
+
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+    </div>
+    <span class="sm-bar" onclick="openNav()">&#9776;</span>
+  </div>
+
+  <script>
+
+    let mobileNav = document.getElementById('mobileNav');
+    function openNav(){
+        mobileNav.style.width = "100%";
+    }
+
+    function closeNav(){
+        mobileNav.style.width = "0%";
+    }
+
+  </script>
+  
+</body>
+</html>
